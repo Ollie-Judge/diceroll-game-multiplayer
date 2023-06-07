@@ -8,41 +8,45 @@
     <title>Multiplayer Dice Roll Game</title>
   </head>
   <body>
-    <div id="player1Div">
-      <h3>Player 1</h3>
-      <p id="player1DiceRollOutput"></p>
+    <div id="gameContainer">
+      <div id="player1Div">
+        <h3>Player 1</h3>
+        <p id="player1DiceRollOutput"></p>
 
-      <div>
-        <p>Current Score</p>
-        <p id="player1Score"></p>
+        <div>
+          <p>Current Score</p>
+          <p id="player1Score"></p>
+        </div>
       </div>
-    </div>
 
-    <div id="diceContainer">
-      <img
-        id="diceImage"
-        class="hidden"
-        src="./img/dice-1.png"
-        alt="Dice Image"
-      />
+      <div id="diceContainer">
+        <img
+          id="diceImage"
+          class="hidden"
+          src="./img/dice-1.png"
+          alt="Dice Image"
+        />
 
-      <h3 id="diceMessage"></h3>
+        <h3 id="diceMessage"></h3>
 
-      <div id="actionContainer">
-        <button id="diceRollButton" onclick="diceRoll()">Roll the Dice</button>
-        <button id="replayButton" class="hidden" onclick="replay()">
-          Click here to Play again
-        </button>
+        <div id="actionContainer">
+          <button id="diceRollButton" onclick="diceRoll()">
+            Roll the Dice
+          </button>
+          <button id="replayButton" class="hidden" onclick="replay()">
+            Click here to Play again
+          </button>
+        </div>
       </div>
-    </div>
 
-    <div id="player2Div">
-      <h3>Player 2</h3>
-      <p id="player2DiceRollOutput"></p>
+      <div id="player2Div">
+        <h3>Player 2</h3>
+        <p id="player2DiceRollOutput"></p>
 
-      <div>
-        <p>Current Score</p>
-        <p id="player2Score"></p>
+        <div>
+          <p>Current Score</p>
+          <p id="player2Score"></p>
+        </div>
       </div>
     </div>
 

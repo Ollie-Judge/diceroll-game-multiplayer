@@ -1,11 +1,20 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .hidden {
   display: none;
 }
 
-body {
+#gameContainer {
   text-align: center;
   display: flex;
   width: 100%;
+}
+
+#diceContainer {
+  background: blue;
 }
 
 #diceImage {
@@ -17,3 +26,14 @@ body {
   margin: auto;
   background: yellow;
 }
+
+/* MAKE THIS THE DEFAULT STYLING 
+
+for phone view make it so the dice is on 
+the top and the scores are below but on the 
+same line as each other */
+
+/* Using media screen set the size 
+for anything bigger than a phone to 
+be everything on one line but spaced 
+nicely */

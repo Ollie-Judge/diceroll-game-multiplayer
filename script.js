@@ -1,7 +1,6 @@
-let score = 0;
 let player1Score = 0;
 let player2Score = 0;
-let rollCounter = 0;
+let rollCounter = 0; // use this to count how many turns it took for the winner to win
 
 const diceRoll = () => {
   let randomDiceRoll = Math.floor(Math.random() * 6) + 1;
@@ -10,9 +9,7 @@ const diceRoll = () => {
 
   console.log("dice roll number" + rollCounter);
 
-  let dice = (document.getElementById(
-    "diceImage"
-  ).src = `./img/dice-${randomDiceRoll}.png`);
+  document.getElementById("diceImage").src = `./img/dice-${randomDiceRoll}.png`;
 
   document.getElementById("diceImage").classList.remove("hidden");
 
