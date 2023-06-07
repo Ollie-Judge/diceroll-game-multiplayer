@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Multiplayer Dice Roll Game</title>
+  </head>
+  <body>
+    <div id="player1Div">
+      <h3>Player 1</h3>
+      <p id="player1DiceRollOutput"></p>
+
+      <div>
+        <p>Current</p>
+        <p id="player1Score"></p>
+      </div>
+
+      <div id="actionContainer">
+        <button id="diceRollButton" onclick="diceRoll()">Roll the Dice</button>
+      </div>
+    </div>
+
+    <div>
+      <img id="diceImage" src="./img/dice-1.png" alt="Dice Image" />
+    </div>
+
+    <div id="player2Div">
+      <h3>Player 2</h3>
+      <p id="player2DiceRollOutput"></p>
+
+      <div>
+        <p>Current</p>
+        <p id="player2Score"></p>
+      </div>
+
+      <div>
+        <button id="diceRollButton" onclick="diceRoll(player2)">
+          Roll the Dice
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
