@@ -5,6 +5,11 @@
 body {
   text-align: center;
   display: flex;
+  width: 100%;
+}
+
+#diceImage {
+  width: 100%;
 }
 
 #player1Div,
