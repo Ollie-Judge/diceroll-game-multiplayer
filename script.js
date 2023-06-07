@@ -21,32 +21,26 @@ const diceRoll = () => {
       case 1:
         player1Score += 1;
         document.getElementById("player1Score").textContent = player1Score;
-        console.log(player1Score);
         break;
       case 2:
         player1Score += 2;
         document.getElementById("player1Score").textContent = player1Score;
-        console.log(player1Score);
         break;
       case 3:
         player1Score += 3;
         document.getElementById("player1Score").textContent = player1Score;
-        console.log(player1Score);
         break;
       case 4:
         player1Score += 4;
         document.getElementById("player1Score").textContent = player1Score;
-        console.log(player1Score);
         break;
       case 5:
         player1Score += 5;
         document.getElementById("player1Score").textContent = player1Score;
-        console.log(player1Score);
         break;
       case 6:
         player1Score += 6;
         document.getElementById("player1Score").textContent = player1Score;
-        console.log(player1Score);
         break;
     }
   } else {
@@ -54,51 +48,41 @@ const diceRoll = () => {
       case 1:
         player2Score += 1;
         document.getElementById("player2Score").textContent = player2Score;
-        console.log(player2Score);
         break;
       case 2:
         player2Score += 2;
         document.getElementById("player2Score").textContent = player2Score;
-        console.log(player2Score);
         break;
       case 3:
         player2Score += 3;
         document.getElementById("player2Score").textContent = player2Score;
-        console.log(player2Score);
         break;
       case 4:
         player2Score += 4;
         document.getElementById("player2Score").textContent = player2Score;
-        console.log(player2Score);
         break;
       case 5:
         player2Score += 5;
         document.getElementById("player2Score").textContent = player2Score;
-        console.log(player2Score);
         break;
       case 6:
         player2Score += 6;
         document.getElementById("player2Score").textContent = player2Score;
-        console.log(player2Score);
         break;
     }
   }
 
-  let endMessage;
-
   if (player1Score >= 10) {
-    console.log("end game");
     document.getElementById("diceRollButton").remove();
-    const message1 = document.createElement("h4");
-    message1.innerHTML = "Player 1, YOU WIN!";
-    document.getElementById("actionContainer").appendChild(message1);
+    const player1WinMessage = document.createElement("h4");
+    player1WinMessage.innerHTML = "Player 1, YOU WIN!";
+    document.getElementById("actionContainer").appendChild(player1WinMessage);
     document.getElementById("replayButton").classList.remove("hidden");
   } else if (player2Score >= 10) {
-    console.log("end game");
     document.getElementById("diceRollButton").remove();
-    const message2 = document.createElement("h4");
-    message2.innerHTML = "Player 2, YOU WIN!";
-    document.getElementById("actionContainer").appendChild(message2);
+    const player2WinMessage = document.createElement("h4");
+    player2WinMessage.innerHTML = "Player 2, YOU WIN!";
+    document.getElementById("actionContainer").appendChild(player2WinMessage);
     document.getElementById("replayButton").classList.remove("hidden");
   }
 };
