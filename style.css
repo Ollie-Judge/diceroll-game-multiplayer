@@ -1,0 +1,14 @@
+.hidden {
+  display: none;
+}
+
+body {
+  text-align: center;
+  display: flex;
+}
+
+#player1Div,
+#player2Div {
+  margin: auto;
+  background: yellow;
+}

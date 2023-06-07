@@ -13,17 +13,27 @@
       <p id="player1DiceRollOutput"></p>
 
       <div>
-        <p>Current</p>
+        <p>Current Score</p>
         <p id="player1Score"></p>
-      </div>
-
-      <div id="actionContainer">
-        <button id="diceRollButton" onclick="diceRoll()">Roll the Dice</button>
       </div>
     </div>
 
-    <div>
-      <img id="diceImage" src="./img/dice-1.png" alt="Dice Image" />
+    <div id="diceContainer">
+      <img
+        id="diceImage"
+        class="hidden"
+        src="./img/dice-1.png"
+        alt="Dice Image"
+      />
+
+      <h3 id="diceMessage"></h3>
+
+      <div id="actionContainer">
+        <button id="diceRollButton" onclick="diceRoll()">Roll the Dice</button>
+        <button id="replayButton" class="hidden" onclick="replay()">
+          Click here to Play again
+        </button>
+      </div>
     </div>
 
     <div id="player2Div">
@@ -31,14 +41,8 @@
       <p id="player2DiceRollOutput"></p>
 
       <div>
-        <p>Current</p>
+        <p>Current Score</p>
         <p id="player2Score"></p>
-      </div>
-
-      <div>
-        <button id="diceRollButton" onclick="diceRoll(player2)">
-          Roll the Dice
-        </button>
       </div>
     </div>
 
