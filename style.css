@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+body {
+  width: fit-content;
+}
+
 .hidden {
   display: none;
 }
@@ -10,11 +14,15 @@
 #gameContainer {
   text-align: center;
   display: flex;
-  width: 100%;
+  width: fit-content;
+  margin: auto;
 }
 
 #diceContainer {
-  background: blue;
+  height: 10em;
+  width: fit-content;
+  margin: auto;
+  display: block;
 }
 
 #diceImage {
@@ -23,8 +31,31 @@
 
 #player1Div,
 #player2Div {
+  height: 10em;
+  width: fit-content;
   margin: auto;
+  border: 1px black solid;
+  border-radius: 25px;
+}
+
+#player1Div {
   background: yellow;
+}
+
+#player2Div {
+  background: blue;
+}
+
+.playerTitle {
+  margin: 25px;
+}
+
+button {
+  border: 1px black solid;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 800px) {
 }
 
 /* MAKE THIS THE DEFAULT STYLING 

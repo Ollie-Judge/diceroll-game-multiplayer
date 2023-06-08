@@ -4,67 +4,82 @@ let rollCounter = 0; // use this to count how many turns it took for the winner 
 
 const diceRoll = () => {
   let randomDiceRoll = Math.floor(Math.random() * 6) + 1;
-  console.log(randomDiceRoll);
-  rollCounter++;
-
-  console.log("dice roll number" + rollCounter);
+  rollCounter++; // use this to change the colour of the background of which player is turn it is
 
   document.getElementById("diceImage").src = `./img/dice-${randomDiceRoll}.png`;
 
   document.getElementById("diceImage").classList.remove("hidden");
 
+  const player1ScoreFunction = () => {
+    document.getElementById("player1Score").textContent = player1Score;
+  };
+
+  const player1Active = () => {
+    document.getElementById("player1Div").style.background = "rgb(255,255,224)";
+  };
+
+  const player2ScoreFunction = () => {
+    document.getElementById("player2Score").textContent = player2Score;
+  };
+
+  const player2Active = () => {
+    document.getElementById("player2Div").style.background = "blue";
+  };
+
   if (rollCounter % 2 === 0) {
+    player1Active();
     switch (randomDiceRoll) {
       case 1:
         player1Score += 1;
-        document.getElementById("player1Score").textContent = player1Score;
+        player1ScoreFunction();
         break;
       case 2:
         player1Score += 2;
-        document.getElementById("player1Score").textContent = player1Score;
+        player1ScoreFunction();
         break;
       case 3:
         player1Score += 3;
-        document.getElementById("player1Score").textContent = player1Score;
+        player1ScoreFunction();
         break;
       case 4:
         player1Score += 4;
-        document.getElementById("player1Score").textContent = player1Score;
+        player1ScoreFunction();
         break;
       case 5:
         player1Score += 5;
-        document.getElementById("player1Score").textContent = player1Score;
+        player1ScoreFunction();
         break;
       case 6:
         player1Score += 6;
-        document.getElementById("player1Score").textContent = player1Score;
+        player1ScoreFunction();
         break;
     }
   } else {
+    player2Active();
     switch (randomDiceRoll) {
       case 1:
         player2Score += 1;
-        document.getElementById("player2Score").textContent = player2Score;
+        player2ScoreFunction();
         break;
       case 2:
         player2Score += 2;
-        document.getElementById("player2Score").textContent = player2Score;
+        player2ScoreFunction();
         break;
       case 3:
         player2Score += 3;
-        document.getElementById("player2Score").textContent = player2Score;
+        player2ScoreFunction();
         break;
       case 4:
         player2Score += 4;
-        document.getElementById("player2Score").textContent = player2Score;
+        player2ScoreFunction();
         break;
       case 5:
         player2Score += 5;
-        document.getElementById("player2Score").textContent = player2Score;
+        player2ScoreFunction();
         break;
       case 6:
         player2Score += 6;
-        document.getElementById("player2Score").textContent = player2Score;
+        player2ScoreFunction();
         break;
     }
   }
